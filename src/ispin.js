@@ -108,7 +108,7 @@ class ISpin {
   }
 
   destroy () {
-    if (this.el.parentNode) this.el.parentNode.replaceChild(this._wrapper, this.el);
+    if (this._wrapper.parentNode) this._wrapper.parentNode.replaceChild(this.el, this._wrapper);
     delete this.el;
     delete this._wrapper;
     delete this._buttons;
