@@ -1,6 +1,6 @@
 {
   "name": "ispin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vanilla javascript number spinner",
   "main": "dist/ispin.js",
   "dependencies": {},
