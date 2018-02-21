@@ -25,16 +25,14 @@
       border-right: 5px solid transparent;
     }
 
-    &:disabled:before {
-      border-top-color: grey;
-      border-bottom-color: grey;
-    }
-
     &.spin-button-inc {
       top: 0;
 
       &:before {
         border-bottom: 5px solid black;
+      }
+      &:disabled:before {
+        border-bottom-color: grey;
       }
     }
 
@@ -43,6 +41,10 @@
 
       &:before {
         border-top: 5px solid black;
+      }
+
+      &:disabled:before {
+        border-top-color: grey;
       }
     }
   }
