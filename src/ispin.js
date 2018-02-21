@@ -115,6 +115,8 @@ class ISpin {
   }
 
   _onKeyDown (e: KeyboardEvent) {
+    e.preventDefault();
+
     switch (e.keyCode) {
       case 38: // arrow up
         return this.spin(this.options.step);
