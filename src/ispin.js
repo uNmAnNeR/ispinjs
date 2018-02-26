@@ -115,16 +115,18 @@ class ISpin {
   }
 
   _onKeyDown (e: KeyboardEvent) {
-    e.preventDefault();
-
     switch (e.keyCode) {
       case 38: // arrow up
+        e.preventDefault();
         return this.spin(this.options.step);
       case 40: // arrow down
+        e.preventDefault();
         return this.spin(-this.options.step);
       case 33: // page up
+        e.preventDefault();
         return this.spin(this.options.pageStep);
       case 34: // page down
+        e.preventDefault();
         return this.spin(-this.options.pageStep);
     }
   }
