@@ -52,7 +52,7 @@ class ISpin {
   build () {
     // wrap element
     this._wrapper = document.createElement('div');
-    if (this.el.parentNode) this.el.parentNode.appendChild(this._wrapper);
+    if (this.el.parentNode) this.el.parentNode.replaceChild(this._wrapper, this.el);
     this._wrapper.appendChild(this.el);
 
     // add buttons
@@ -167,7 +167,7 @@ class ISpin {
   }
 
   get value (): number {
-    return this.options.parse(this.el.value);
+    return this.options.parse(this.el.value) || 0;
   }
 
   set value (value: number) {
