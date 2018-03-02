@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ispinjs - vanilla javascript number spinner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/ispin/dist/ispin.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="title"><a href="/ispinjs">ispin<sub>js</sub></a></h1>
+        <em>vanilla javascript number spinner</em>
+      </div>
+    </header>
+    <main>
+      <div class="row gutters">
+        <div class="col col-6">
+          <form class="form">
+            <h4>Demo</h4>
+            <div class="form-item">
+              <input id="number-input" type="text" value="">
+
+              <pre><code>var el = document.getElementById('number-input');
+var spinner = new ISpin(el, {
+  // options with defaults
+  wrapperClass: 'spin-wrapper',
+  buttonsClass: 'spin-button',
+  step: 1,
+  pageStep: 10,
+  disabled: false,
+  repeatInterval: 200,
+  wrapOverflow: false,
+  parse: Number,
+  format: String
+});</code></pre>
+            </div>
+          </form>
+        </div>
+
+        <div class="col col-6">
+          <h4>Features</h4>
+          <ul>
+            <li>easy to use</li>
+            <li>no external dependencies</li>
+            <li>supports all major browsers and IE11+</li>
+            <li>customizable and extendable</li>
+          </ul>
+          <h4>Install</h4>
+          <p>Install from <a href="https://www.npmjs.com/package/ispin">npm</a> or use CDN:</p>
+          <pre><code>&lt;link href=&quot;https://unpkg.com/ispin/dist/ispin.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https://unpkg.com/ispin&quot;&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center">
+      <nav class="breadcrumbs push-center">
+        <ul>
+          <li><span class="active">donate</span></li>
+          <li><a href="https://www.paypal.me/alexeykryazhev/1" target="_blank">$1</a></li>
+          <li><a href="https://www.paypal.me/alexeykryazhev/5" target="_blank">$5</a></li>
+          <li><a href="https://www.paypal.me/alexeykryazhev/10" target="_blank">$10</a></li>
+          <li><a href="https://www.paypal.me/alexeykryazhev/20" target="_blank">$20</a></li>
+          <li><span class="active">to support</span></li>
+        </ul>
+      </nav>
+      <span>by <a href="https://github.com/uNmAnNeR">@Alexey Kryazhev</a></span>
+    </footer>
+    <script defer src="https://unpkg.com/ispin"></script>
+    <!-- <script defer src="../dist/ispin.js"></script> -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var spinner = new ISpin(document.getElementById('number-input'), {
+          // options with defaults
+          wrapperClass: 'spin-wrapper',
+          buttonsClass: 'spin-button',
+          step: 1,
+          pageStep: 10,
+          disabled: false,
+          repeatInterval: 200,
+          wrapOverflow: false,
+          parse: Number,
+          format: String
+        });
+      });
+    </script>
+  </body>
+</html>
