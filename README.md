@@ -15,8 +15,10 @@ vanilla javascript number spinner
 
 or use CDN:
 
-`<link href="https://unpkg.com/ispin/dist/ispin.css" rel="stylesheet">
-<script src="https://unpkg.com/imask"></script>`
+```html
+<link href="https://unpkg.com/ispin/dist/ispin.css" rel="stylesheet">
+<script src="https://unpkg.com/imask"></script>
+```
 
 ## Build
 `npm run build`
