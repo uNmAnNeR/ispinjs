@@ -18,6 +18,11 @@
         <h1 class="title"><a href="/ispinjs">ispin<sub>js</sub></a></h1>
         <em>vanilla javascript number spinner</em>
       </div>
+      <nav class="breadcrumbs push-center">
+        <ul>
+          <li><a href="https://github.com/uNmAnNeR/ispinjs">on Github</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <div class="row gutters">
@@ -30,8 +35,8 @@
               <pre><code>var el = document.getElementById('number-input');
 var spinner = new ISpin(el, {
   // options with defaults
-  wrapperClass: 'spin-wrapper',
-  buttonsClass: 'spin-button',
+  wrapperClass: 'ispin-wrapper',
+  buttonsClass: 'ispin-button',
   step: 1,
   pageStep: 10,
   disabled: false,
@@ -62,24 +67,19 @@ var spinner = new ISpin(el, {
     <footer class="text-center">
       <nav class="breadcrumbs push-center">
         <ul>
-          <li><span class="active">donate</span></li>
-          <li><a href="https://www.paypal.me/alexeykryazhev/1" target="_blank">$1</a></li>
-          <li><a href="https://www.paypal.me/alexeykryazhev/5" target="_blank">$5</a></li>
-          <li><a href="https://www.paypal.me/alexeykryazhev/10" target="_blank">$10</a></li>
-          <li><a href="https://www.paypal.me/alexeykryazhev/20" target="_blank">$20</a></li>
-          <li><span class="active">to support</span></li>
+          <li><span class="active">see also</span></li>
+          <li><a href="https://unmanner.github.io/imaskjs/" target="_blank">imask<sub>js</sub></a></li>
+          <li><a href="https://github.com/uNmAnNeR/travajs" target="_blank">trava<sub>js</sub></a></li>
         </ul>
       </nav>
-      <span>by <a href="https://github.com/uNmAnNeR">@Alexey Kryazhev</a></span>
     </footer>
     <script defer src="https://unpkg.com/ispin"></script>
-    <!-- <script defer src="../dist/ispin.js"></script> -->
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
         var spinner = new ISpin(document.getElementById('number-input'), {
           // options with defaults
-          wrapperClass: 'spin-wrapper',
-          buttonsClass: 'spin-button',
+          wrapperClass: 'ispin-wrapper',
+          buttonsClass: 'ispin-button',
           step: 1,
           pageStep: 10,
           disabled: false,

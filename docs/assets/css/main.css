@@ -50,6 +50,10 @@ footer {
   margin-bottom: 30px;
 }
 
+footer nav {
+  border-bottom: none;
+}
+
 .spin-wrapper {
   width: 100%;
 }

@@ -141,11 +141,11 @@ class ISpin {
     this._startSpinning(direction);
   }
 
-  _onMouseUp () {
+  _onMouseUp (e: MouseEvent) {
     this._stopSpinning();
   }
 
-  _onMouseLeave () {
+  _onMouseLeave (e: MouseEvent) {
     this._stopSpinning();
   }
 
