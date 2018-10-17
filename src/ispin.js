@@ -219,8 +219,8 @@ class ISpin {
   }
 }
 ISpin.DEFAULTS = {
-  wrapperClass: 'spin-wrapper',
-  buttonsClass: 'spin-button',
+  wrapperClass: 'ispin-wrapper',
+  buttonsClass: 'ispin-button',
   step: 1,
   pageStep: 10,
   disabled: false,

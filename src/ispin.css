@@ -1,11 +1,11 @@
-.spin-wrapper {
+.ispin-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
   padding: 0;
   vertical-align: middle;
 
-  & .spin-button {
+  & .ispin-button {
     position: absolute;
     display: block;
     height: 50%;
@@ -21,11 +21,11 @@
       content: '';
       display: inline-block;
       transform: translateY(-50%);
-      border-left: 5px solid transparent;
+      bordreposs-left: 5px solid transparent;
       border-right: 5px solid transparent;
     }
 
-    &.spin-button-inc {
+    &.ispin-button-inc {
       top: 0;
 
       &:before {
@@ -36,7 +36,7 @@
       }
     }
 
-    &.spin-button-dec {
+    &.ispin-button-dec {
       bottom: 0;
 
       &:before {

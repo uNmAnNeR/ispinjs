@@ -1,9 +1,8 @@
 import babel from 'rollup-plugin-babel';
-import uglify from 'rollup-plugin-uglify';
-import eslint from 'rollup-plugin-eslint';
+import { terser } from 'rollup-plugin-terser';
+import { eslint } from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import {minify} from 'uglify-es';
 
 
 const isProd = process.env.env === 'production';
@@ -18,14 +17,10 @@ const file = 'dist/ispin' +
 const input = 'src/ispin.js';
 
 const babelConf = isES ? {
-  externalHelpersWhitelist: [
-    'extends',
-    'slicedToArray'
-  ],
   presets: [
-    ['env', {
+    ['@babel/preset-env', {
       modules: false,
-      useBuiltIns: true,
+      useBuiltIns: 'entry',
       targets: {
         browsers: [
           'Chrome >= 60',
@@ -36,20 +31,18 @@ const babelConf = isES ? {
         ],
       },
     }],
-    'flow',
+    '@babel/preset-flow',
   ],
-  // waiting for https://github.com/rollup/rollup/issues/1613
-  plugins: ['transform-object-rest-spread', 'external-helpers']
 } : {
   presets: [
-    ['env', {
+    ['@babel/preset-env', {
       'modules': false,
-      'useBuiltIns': true
+      'useBuiltIns': 'entry'
     }],
-    'flow',
+    '@babel/preset-flow',
   ],
   exclude: 'node_modules/**',
-  plugins: ['transform-object-rest-spread', 'transform-object-assign', 'external-helpers']
+  plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-object-assign']
 };
 
 
@@ -63,12 +56,9 @@ export default {
   },
   plugins: [
     eslint({configFile: '.eslintrc'}),
-    resolve({
-      jsnext: true,
-      main: true
-    }),
+    resolve(),
     babel(babelConf),
     !isES && commonjs(),
-    isProd && uglify({}, minify)
+    isProd && terser()
   ]
 }
