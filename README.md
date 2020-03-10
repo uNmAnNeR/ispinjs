@@ -17,7 +17,7 @@ or use CDN:
 
 ```html
 <link href="https://unpkg.com/ispin/dist/ispin.css" rel="stylesheet">
-<script src="https://unpkg.com/imask"></script>
+<script src="https://unpkg.com/ispin"></script>
 ```
 
 ## Build
